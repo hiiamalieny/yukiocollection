@@ -154,7 +154,7 @@ export const YUKIO_LIST: YukioItem[] = [
   },
   {
     id: "Y026",
-    name: "螢光魷魚",
+    name: "螢光魷魚發光體",
     category: "海洋系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_hotaruika.jpg",
   },
@@ -172,8 +172,8 @@ export const YUKIO_LIST: YukioItem[] = [
   },
   {
     id: "Y029",
-    name: "龜BB",
-    category: "動物系列",
+    name: "海龜BB",
+    category: "海洋系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_kame.jpg",
   },
   {
@@ -190,8 +190,8 @@ export const YUKIO_LIST: YukioItem[] = [
   },
   {
     id: "Y032",
-    name: "雷鳥",
-    category: "日本地方系列",
+    name: "美白雷鳥",
+    category: "動物系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_raicyo.jpg",
   },
   {
