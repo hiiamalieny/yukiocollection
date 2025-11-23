@@ -211,7 +211,7 @@ export const YUKIO_LIST: YukioItem[] = [
     name: "老虎",
     category: "動物系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_tora.jpg",
-  }
+  },
   {
     id: "Y036",
     name: "女朋友",
