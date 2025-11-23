@@ -72,12 +72,9 @@ const App: React.FC = () => {
   }, [statusFilter, categoryFilter, ownedIds]);
 
   if (isLoading) {
+    const YukioHeartIconUrl = new URL('/yukio-heart.png', import.meta.env.BASE_URL).href;
     return <div className="min-h-screen flex items-center justify-center text-yukio-text font-bold animate-pulse">載入中...</div>;
   }
-
-  // Custom SVG for the Blue Heart Face Icon (Hand-drawn style)
-  // Replicating the provided image: Blue blobby heart, yellow squinty eyes, vertical nose, small mouth.
-  const CustomHeartIcon = "data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 100 185 C 60 165 10 120 10 75 C 10 35 45 15 75 25 C 90 30 100 45 100 45 C 100 45 110 30 135 20 C 165 10 190 40 190 70 C 190 110 150 160 100 185 Z' fill='%23303A95' /%3E%3Cg fill='%23D8E022'%3E%3Cpath d='M 55 85 Q 70 75 85 85' stroke='%23D8E022' stroke-width='6' fill='none' stroke-linecap='round' /%3E%3Cpath d='M 125 80 Q 140 70 155 80' stroke='%23D8E022' stroke-width='6' fill='none' stroke-linecap='round' /%3E%3Cpath d='M 105 100 L 105 135' stroke='%23D8E022' stroke-width='6' fill='none' stroke-linecap='round' /%3E%3Cpath d='M 95 155 Q 105 160 115 155' stroke='%23D8E022' stroke-width='6' fill='none' stroke-linecap='round' /%3E%3C/g%3E%3C/svg%3E";
 
   return (
     <div className="min-h-screen pb-24">
@@ -91,10 +88,10 @@ const App: React.FC = () => {
             <div className="flex items-center gap-3">
               {/* Icon - No Background Wrapper */}
               <img 
-                src={CustomHeartIcon} 
-                alt="YUKIO Heart" 
-                className="w-12 h-12 object-contain drop-shadow-sm hover:scale-110 transition-transform duration-300" 
-              />
+  src={YukioHeartIconUrl} 
+  alt="YUKIO Heart" 
+  className="w-12 h-12 object-contain drop-shadow-sm hover:scale-110 transition-transform duration-300" 
+/>
               <h1 className="text-2xl font-black text-yukio-text tracking-tight">
                 YUKIO <span className="text-yukio-text/70 font-normal">收藏圖鑑</span>
               </h1>
