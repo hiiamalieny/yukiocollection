@@ -69,7 +69,9 @@ const App: React.FC = () => {
       return matchesStatus && matchesCategory;
     });
   }, [statusFilter, categoryFilter, ownedIds]);
-  const YukioHeartIconUrl = new URL('/yukio-heart.png', import.meta.env.BASE_URL).href;
+  
+  const YukioHeartIconUrl = `${import.meta.env.BASE_URL}yukio-heart.png`;
+  
   if (isLoading) {
     return <div className="min-h-screen flex items-center justify-center text-yukio-text font-bold animate-pulse">載入中...</div>;
   }
