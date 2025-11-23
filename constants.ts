@@ -245,7 +245,7 @@ export const YUKIO_LIST: YukioItem[] = [
   {
     id: "Y041",
     name: "乒乓球",
-    category: "人物系列",
+    category: "運動系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_mc_takkyu.jpg",
   },
   {
@@ -259,5 +259,59 @@ export const YUKIO_LIST: YukioItem[] = [
     name: "貓頭鷹",
     category: "動物系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_hukurou.jpg",
+  },
+  {
+    id: "Y044",
+    name: "網球",
+    category: "運動系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_tennis.jpg",
+  },
+  {
+    id: "Y045",
+    name: "排球",
+    category: "運動系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_volley.jpg",
+  },
+  {
+    id: "Y046",
+    name: "足球（藍）",
+    category: "運動系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_soccer_blue.jpg",
+  },
+  {
+    id: "Y047",
+    name: "籃球",
+    category: "運動系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_baske.jpg",
+  },
+  {
+    id: "Y048",
+    name: "棒球",
+    category: "運動系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_baseball.jpg",
+  },
+  {
+    id: "Y049",
+    name: "力士相撲",
+    category: "人物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_rikishi.jpg",
+  },
+  {
+    id: "Y050",
+    name: "鯨鯊",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/jinbeizame.jpg",
+  },
+  {
+    id: "Y051",
+    name: "章魚",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_octopus.jpg",
+  },
+  {
+    id: "Y052",
+    name: "乳牛",
+    category: "動物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_holstein.jpg",
   },
 ];
