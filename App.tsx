@@ -3,8 +3,6 @@ import { YUKIO_LIST } from './constants';
 import { YukioCard } from './components/YukioCard';
 import { Heart, Filter, Sparkles, LayoutGrid } from 'lucide-react';
 
-const STORAGE_KEY = 'yukio_owned_list_v2';
-
 const App: React.FC = () => {
   // 1. STATE MANAGEMENT
   const [ownedIds, setOwnedIds] = useState<string[]>([]);
@@ -16,7 +14,7 @@ const App: React.FC = () => {
 
   // 2. LOAD DATA
   useEffect(() => {
-    const savedData = localStorage.getItem(STORAGE_KEY);
+    const savedData = localStorage.getItem('yukio_owned_list');
     if (savedData) {
       try {
         setOwnedIds(JSON.parse(savedData));
@@ -30,7 +28,7 @@ const App: React.FC = () => {
   // 3. SAVE DATA
   useEffect(() => {
     if (!isLoading) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(ownedIds));
+      localStorage.setItem('yukio_owned_list', JSON.stringify(ownedIds));
     }
   }, [ownedIds, isLoading]);
 
@@ -74,51 +72,66 @@ const App: React.FC = () => {
   }, [statusFilter, categoryFilter, ownedIds]);
 
   if (isLoading) {
-    return <div className="min-h-screen flex items-center justify-center text-yukio-dark font-bold animate-pulse">載入中...</div>;
+    return <div className="min-h-screen flex items-center justify-center text-yukio-text font-bold animate-pulse">載入中...</div>;
   }
+
+  // Custom SVG for the Blue Heart Face Icon (Hand-drawn style)
+  // Replicating the provided image: Blue blobby heart, yellow squinty eyes, vertical nose, small mouth.
+  const CustomHeartIcon = "data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 100 185 C 60 165 10 120 10 75 C 10 35 45 15 75 25 C 90 30 100 45 100 45 C 100 45 110 30 135 20 C 165 10 190 40 190 70 C 190 110 150 160 100 185 Z' fill='%23303A95' /%3E%3Cg fill='%23D8E022'%3E%3Cpath d='M 55 85 Q 70 75 85 85' stroke='%23D8E022' stroke-width='6' fill='none' stroke-linecap='round' /%3E%3Cpath d='M 125 80 Q 140 70 155 80' stroke='%23D8E022' stroke-width='6' fill='none' stroke-linecap='round' /%3E%3Cpath d='M 105 100 L 105 135' stroke='%23D8E022' stroke-width='6' fill='none' stroke-linecap='round' /%3E%3Cpath d='M 95 155 Q 105 160 115 155' stroke='%23D8E022' stroke-width='6' fill='none' stroke-linecap='round' /%3E%3C/g%3E%3C/svg%3E";
 
   return (
     <div className="min-h-screen pb-24">
       
       {/* HEADER SECTION */}
-      <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-20 border-b border-yukio-pink/20">
+      <header className="bg-yukio-bg/90 backdrop-blur-md shadow-sm sticky top-0 z-20 border-b border-yukio-electric/10">
         <div className="max-w-6xl mx-auto px-4 py-4">
           
           {/* Top Bar: Logo */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
             <div className="flex items-center gap-3">
-              <div className="bg-yukio-pink p-2 rounded-2xl shadow-sm rotate-0">
-                <img
-    src={`${import.meta.env.BASE_URL}yukio-icon.svg`}
-    alt="Yukio Icon"
-    className="w-6 h-6"
-  />
-              </div>
+              {/* Icon - No Background Wrapper */}
+              <img 
+                src={CustomHeartIcon} 
+                alt="YUKIO Heart" 
+                className="w-12 h-12 object-contain drop-shadow-sm hover:scale-110 transition-transform duration-300" 
+              />
               <h1 className="text-2xl font-black text-yukio-text tracking-tight">
-                YUKIO <span className="text-yukio-dark font-normal">收藏圖鑑</span>
+                YUKIO <span className="text-yukio-text/70 font-normal">收藏清單</span>
               </h1>
             </div>
           </div>
 
           {/* Filters Row */}
-          <div className="flex flex-wrap gap-3 items-center justify-between bg-white p-3 rounded-2xl border border-yukio-bg shadow-sm">
+          <div className="flex flex-wrap gap-3 items-center justify-between bg-white p-3 rounded-2xl border border-yukio-electric/10 shadow-sm">
              <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar w-full md:w-auto">
                 {/* Status Filters */}
                 <button 
                   onClick={() => setStatusFilter('all')}
-                  className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${statusFilter === 'all' ? 'bg-yukio-text text-white shadow-md' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}
+                  className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all border-2
+                    ${statusFilter === 'all' 
+                      ? 'bg-yukio-electric text-yukio-neon border-yukio-electric shadow-md' 
+                      : 'bg-transparent text-gray-400 border-transparent hover:bg-gray-100'
+                    }`}
                 >
                   全部
                 </button>
                 <button 
                   onClick={() => setStatusFilter('owned')}
-                  className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all flex items-center gap-1 ${statusFilter === 'owned' ? 'bg-yukio-dark text-white shadow-md' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}
+                  className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all flex items-center gap-1 border-2
+                    ${statusFilter === 'owned' 
+                      ? 'bg-yukio-neon text-yukio-electric border-yukio-neon shadow-md' 
+                      : 'bg-transparent text-gray-400 border-transparent hover:bg-gray-100'
+                    }`}
                 >
                   <Heart className="w-3 h-3 fill-current" /> 已收藏
                 </button>
                 <button 
                   onClick={() => setStatusFilter('missing')}
-                  className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all flex items-center gap-1 ${statusFilter === 'missing' ? 'bg-yukio-accent text-yukio-text shadow-md' : 'bg-gray-100 text-gray-400 hover:bg-gray-200'}`}
+                  className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all flex items-center gap-1 border-2
+                    ${statusFilter === 'missing' 
+                      ? 'bg-yukio-sky text-yukio-electric border-yukio-sky shadow-md' 
+                      : 'bg-transparent text-gray-400 border-transparent hover:bg-gray-100'
+                    }`}
                 >
                    未收藏
                 </button>
@@ -130,7 +143,7 @@ const App: React.FC = () => {
                <select 
                   value={categoryFilter}
                   onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="w-full md:w-auto pl-9 pr-8 py-2 rounded-xl bg-yukio-bg text-yukio-text text-sm font-bold border border-transparent focus:border-yukio-dark focus:outline-none appearance-none cursor-pointer"
+                  className="w-full md:w-auto pl-9 pr-8 py-2 rounded-xl bg-yukio-bg text-yukio-text text-sm font-bold border-2 border-transparent focus:border-yukio-electric focus:outline-none appearance-none cursor-pointer"
                >
                  <option value="all">所有系列</option>
                  {categories.map(cat => (
@@ -152,11 +165,11 @@ const App: React.FC = () => {
         <div className="bg-white rounded-3xl p-6 mb-8 shadow-sm border border-white flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="text-lg font-bold text-yukio-text mb-1 flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-yukio-dark" />
+              <Sparkles className="w-5 h-5 text-yukio-tangerine" />
               你嘅收藏進度
             </h2>
             <p className="text-yukio-text/60 text-sm">
-              加油！仲有 <span className="font-bold text-yukio-dark">{totalItems - ownedCount}</span> 隻就儲齊啦！
+              加油！仲有 <span className="font-bold text-yukio-text">{totalItems - ownedCount}</span> 隻就儲齊啦！
             </p>
           </div>
           <div className="w-full md:w-1/2">
@@ -166,7 +179,7 @@ const App: React.FC = () => {
              </div>
              <div className="h-4 w-full bg-yukio-bg rounded-full overflow-hidden shadow-inner">
                <div 
-                 className="h-full bg-gradient-to-r from-yukio-pink to-yukio-dark transition-all duration-1000 ease-out rounded-full relative"
+                 className="h-full bg-gradient-to-r from-yukio-sky to-yukio-electric transition-all duration-1000 ease-out rounded-full relative"
                  style={{ width: `${progressPercentage}%` }}
                >
                  <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/diagonal-stripes.png')] opacity-20"></div>
@@ -179,12 +192,12 @@ const App: React.FC = () => {
         {filteredList.length === 0 ? (
           <div className="text-center py-20">
             <div className="bg-white inline-flex p-6 rounded-full mb-4 shadow-sm">
-              <Filter className="w-12 h-12 text-yukio-bg" />
+              <Filter className="w-12 h-12 text-yukio-sky" />
             </div>
             <p className="text-yukio-text/60 font-medium">搵唔到符合條件嘅 Yukio 喎...</p>
             <button 
               onClick={() => {setStatusFilter('all'); setCategoryFilter('all');}}
-              className="mt-4 text-yukio-dark font-bold hover:underline"
+              className="mt-4 text-yukio-electric font-bold hover:underline"
             >
               清除篩選
             </button>
