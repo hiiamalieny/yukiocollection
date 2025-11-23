@@ -140,4 +140,76 @@ export const YUKIO_LIST: YukioItem[] = [
     category: "PICO 系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/picpic_kitakubu.jpg",
   },
+  {
+    id: "Y024",
+    name: "青鳥ゆきお",
+    category: "動物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yuki_aoitori_1.jpg",
+  },
+  {
+    id: "Y025",
+    name: "海星ゆきお",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_hitode_omote.jpg",
+  },
+  {
+    id: "Y026",
+    name: "螢火魷魚ゆきお",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_hotaruika.jpg",
+  },
+  {
+    id: "Y027",
+    name: "魷魚ゆきお",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_ika_omote.jpg",
+  },
+  {
+    id: "Y028",
+    name: "小丑魚ゆきお",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_kakurekumanomi_omote.jpg",
+  },
+  {
+    id: "Y029",
+    name: "龜ゆきお",
+    category: "動物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_kame.jpg",
+  },
+  {
+    id: "Y030",
+    name: "皇帝企鵝ゆきお",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_kouteipengin_omote.jpg",
+  },
+  {
+    id: "Y031",
+    name: "飛機ゆきお",
+    category: "特別 / 交通系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_plane_omote.jpg",
+  },
+  {
+    id: "Y032",
+    name: "雷鳥ゆきお",
+    category: "日本地方系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_raicyo.jpg",
+  },
+  {
+    id: "Y033",
+    name: "鯊魚ゆきお",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_same_omote.jpg",
+  },
+  {
+    id: "Y034",
+    name: "白蝦ゆきお",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_shiroebi_n.jpg",
+  },
+  {
+    id: "Y035",
+    name: "老虎ゆきお",
+    category: "動物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_tora.jpg",
+  }
 ];
