@@ -96,7 +96,7 @@ const App: React.FC = () => {
                 className="w-12 h-12 object-contain drop-shadow-sm hover:scale-110 transition-transform duration-300" 
               />
               <h1 className="text-2xl font-black text-yukio-text tracking-tight">
-                YUKIO <span className="text-yukio-text/70 font-normal">收藏清單</span>
+                YUKIO <span className="text-yukio-text/70 font-normal">收藏圖鑑</span>
               </h1>
             </div>
           </div>
