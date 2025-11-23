@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>YUKIO 收藏圖鑑</title>
+    <title>YUKIO 收藏清單</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -11,12 +11,18 @@
           extend: {
             colors: {
               yukio: {
-                bg: '#fdfbf7',      // Warm Cream/Off-white
-                card: '#ffffff',    // White
-                pink: '#dcbfa6',    // Warm Sand (Primary Action)
-                dark: '#a68a74',    // Earth/Taupe (Darker Accent)
-                text: '#5c4d43',    // Dark Coffee Brown
-                accent: '#ebe5ce'   // Pale Beige
+                bg: '#F7F3E6',       // Leche (Background)
+                card: '#ffffff',     // White
+                electric: '#303A95', // Electric (Main Text / Primary Dark)
+                neon: '#D8E022',     // Neon (Highlight / Owned / Secondary Text)
+                sky: '#A9D7F3',      // Sky (Secondary Background / Missing)
+                tangerine: '#F8982E',// Tangerine (Accent)
+                
+                // Mappings for semantic clarity
+                text: '#303A95',     // Main text is Electric
+                pink: '#D8E022',     // Re-mapped 'pink' var to Neon for compatibility
+                dark: '#303A95',     // Re-mapped 'dark' var to Electric
+                accent: '#F8982E'    // Re-mapped 'accent' var to Tangerine
               }
             },
             fontFamily: {
@@ -42,7 +48,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-yukio-bg text-yukio-text antialiased selection:bg-yukio-pink selection:text-white">
+  <body class="bg-yukio-bg text-yukio-text antialiased selection:bg-yukio-neon selection:text-yukio-electric">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
