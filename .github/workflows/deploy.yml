@@ -2,8 +2,10 @@ name: Deploy Vite app to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches:
+      - main        # 你平時改嘢都係 push 去 main
+
+  workflow_dispatch: # 需要嘅時候可以手動 rerun
 
 permissions:
   contents: read
@@ -17,8 +19,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -31,8 +34,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Upload build output
+      - name: Upload production-ready files
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -43,6 +48,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
