@@ -10,7 +10,7 @@ interface YukioCardProps {
 
 /**
  * YukioCard displays a single item.
- * Updated for a girlish, modern look without ID display.
+ * Updated for Pop Art Theme (Electric/Neon)
  */
 export const YukioCard: React.FC<YukioCardProps> = ({ item, isOwned, onToggle }) => {
   return (
@@ -21,8 +21,8 @@ export const YukioCard: React.FC<YukioCardProps> = ({ item, isOwned, onToggle })
         rounded-3xl p-3 flex flex-col gap-3 border-2
         hover:shadow-xl hover:-translate-y-1
         ${isOwned 
-          ? 'bg-white border-yukio-pink shadow-lg ring-2 ring-yukio-pink/20' 
-          : 'bg-white/80 border-white hover:border-yukio-pink/50'
+          ? 'bg-white border-yukio-neon shadow-lg ring-2 ring-yukio-neon/20' 
+          : 'bg-white/80 border-white hover:border-yukio-sky'
         }
       `}
     >
@@ -39,9 +39,9 @@ export const YukioCard: React.FC<YukioCardProps> = ({ item, isOwned, onToggle })
         
         {/* Overlay badge when owned */}
         {isOwned && (
-          <div className="absolute inset-0 bg-yukio-pink/10 flex items-center justify-center animate-in fade-in duration-300">
+          <div className="absolute inset-0 bg-yukio-neon/10 flex items-center justify-center animate-in fade-in duration-300">
              <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-sm">
-                <Heart className="w-8 h-8 text-yukio-dark fill-yukio-dark" />
+                <Heart className="w-8 h-8 text-yukio-electric fill-yukio-electric" />
              </div>
           </div>
         )}
@@ -68,8 +68,8 @@ export const YukioCard: React.FC<YukioCardProps> = ({ item, isOwned, onToggle })
         className={`
           w-full py-3 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2
           ${isOwned 
-            ? 'bg-gradient-to-r from-yukio-pink to-yukio-dark text-white shadow-md shadow-yukio-pink/30' 
-            : 'bg-gray-100 text-gray-400 hover:bg-yukio-bg hover:text-yukio-dark'
+            ? 'bg-yukio-neon text-yukio-electric shadow-md' 
+            : 'bg-gray-100 text-gray-400 hover:bg-yukio-sky hover:text-yukio-electric'
           }
         `}
       >
