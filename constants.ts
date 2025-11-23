@@ -66,7 +66,7 @@ export const YUKIO_LIST: YukioItem[] = [
     id: "Y011",
     name: "小雞",
     category: "PICO 系列",
-    imageUrl: "https://image1.shopserve.jp/am-sanwa.co.jp/pic-labo/llimg/picpic_hiyoko.jpg",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/picpic_hiyoko.jpg",
   },
   {
     id: "Y012",
