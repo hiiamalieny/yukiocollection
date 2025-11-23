@@ -185,7 +185,7 @@ export const YUKIO_LIST: YukioItem[] = [
   {
     id: "Y031",
     name: "你好普通人",
-    category: "其他",
+    category: "人物系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_plane_omote.jpg",
   },
   {
@@ -212,4 +212,52 @@ export const YUKIO_LIST: YukioItem[] = [
     category: "動物系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_tora.jpg",
   }
+  {
+    id: "Y036",
+    name: "女朋友",
+    category: "人物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_kanojo.jpg",
+  },
+  {
+    id: "Y037",
+    name: "粉紅豬",
+    category: "動物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukiobuta.jpg",
+  },
+  {
+    id: "Y038",
+    name: "織田信長",
+    category: "人物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_nobunaga.jpg",
+  },
+  {
+    id: "Y039",
+    name: "豐臣秀吉",
+    category: "人物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_hideyoshi.jpg",
+  },
+  {
+    id: "Y040",
+    name: "德川家康",
+    category: "人物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_tokugawa.jpg",
+  },
+  {
+    id: "Y041",
+    name: "乒乓球",
+    category: "人物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_mc_takkyu.jpg",
+  },
+  {
+    id: "Y042",
+    name: "紅色鯛魚",
+    category: "海洋系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_tai.jpg",
+  },
+  {
+    id: "Y043",
+    name: "貓頭鷹",
+    category: "動物系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_hukurou.jpg",
+  },
 ];
