@@ -314,4 +314,46 @@ export const YUKIO_LIST: YukioItem[] = [
     category: "動物系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_holstein.jpg",
   },
+  {
+    id: "Y053",
+    name: "玉米仔",
+    category: "北海道系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_toukibi.jpg",
+  },
+  {
+    id: "Y054",
+    name: "蝦夷鹿",
+    category: "北海道系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/ezoshika.jpg",
+  },
+  {
+    id: "Y055",
+    name: "薰衣草貓",
+    category: "北海道系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_lavenyan.jpg",
+  },
+  {
+    id: "Y056",
+    name: "狐狸",
+    category: "北海道系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_kitsune.jpg",
+  },
+  {
+    id: "Y057",
+    name: "粉紅海天使",
+    category: "北海道系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_clione.jpg",
+  },
+  {
+    id: "Y058",
+    name: "北海道熊",
+    category: "北海道系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_kuma.jpg",
+  },
+  {
+    id: "Y059",
+    name: "綠藻球",
+    category: "北海道系列",
+    imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_marimo.jpg",
+  },
 ];
