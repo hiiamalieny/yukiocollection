@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { YUKIO_LIST } from './constants';
-import { YukioCard } from './components/YukioCard';
+import { YukioCard } from '../components/YukioCard';
 import { Heart, Filter, Sparkles, LayoutGrid } from 'lucide-react';
 
 const App: React.FC = () => {
