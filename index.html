@@ -4,25 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>YUKIO 收藏圖鑑</title>
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
               yukio: {
-                bg: '#F7F3E6',       // Leche (Background)
-                card: '#ffffff',     // White
-                electric: '#303A95', // Electric (Main Text / Primary Dark)
-                neon: '#D8E022',     // Neon (Highlight / Owned / Secondary Text)
-                sky: '#A9D7F3',      // Sky (Secondary Background / Missing)
-                tangerine: '#F8982E',// Tangerine (Accent)
-                
-                // Mappings for semantic clarity
-                text: '#303A95',     // Main text is Electric
-                pink: '#D8E022',     // Re-mapped 'pink' var to Neon for compatibility
-                dark: '#303A95',     // Re-mapped 'dark' var to Electric
-                accent: '#F8982E'    // Re-mapped 'accent' var to Tangerine
+                bg: '#F7F3E6',
+                card: '#ffffff',
+                electric: '#303A95',
+                neon: '#D8E022',
+                sky: '#A9D7F3',
+                tangerine: '#F8982E',
+                text: '#303A95',
+                pink: '#D8E022',
+                dark: '#303A95',
+                accent: '#F8982E'
               }
             },
             fontFamily: {
@@ -36,19 +38,21 @@
         }
       }
     </script>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
-</head>
+
+    <!-- Importmap -->
+    <script type="importmap">
+    {
+      "imports": {
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+      }
+    }
+    </script>
+  </head>
   <body class="bg-yukio-bg text-yukio-text antialiased selection:bg-yukio-neon selection:text-yukio-electric">
     <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
 </html>
