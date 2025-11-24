@@ -356,4 +356,46 @@ export const YUKIO_LIST: YukioItem[] = [
     category: "北海道系列",
     imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_marimo.jpg",
   },
+  {
+  id: "Y060",
+  name: "藍色Shisa",
+  category: "沖繩系列",
+  imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_sisablue.jpg",
+},
+{
+  id: "Y061",
+  name: "紅色Shisa",
+  category: "沖繩系列",
+  imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_sisared.jpg",
+},
+{
+  id: "Y062",
+  name: "沖繩兔仔",
+  category: "沖繩系列",
+  imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_usabisukasu.jpg",
+},
+{
+  id: "Y063",
+  name: "沖繩菠蘿",
+  category: "沖繩系列",
+  imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_okinawa_pain.jpg",
+},
+{
+  id: "Y064",
+  name: "沖繩苦瓜",
+  category: "沖繩系列",
+  imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_okinawa_goya.jpg",
+},
+{
+  id: "Y065",
+  name: "沖繩紫薯撻",
+  category: "沖繩系列",
+  imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_okinawa_imotart.jpg",
+},
+{
+  id: "Y066",
+  name: "西郷隆盛",
+  category: "人物系列",
+  imageUrl: "https://raw.githubusercontent.com/hiiamalieny/yukiocollection/main/public/images/yukio_saigo.jpg",
+},
 ];
