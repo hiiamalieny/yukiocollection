@@ -57,7 +57,7 @@ const App: React.FC = () => {
     });
   }, [statusFilter, categoryFilter, ownedIds]);
 
-  const YukioHeartIconUrl = `${import.meta.env.BASE_URL}images/yukio-heart.png`;
+  const YukioHeartIconUrl = `${import.meta.env.BASE_URL}yukio-heart.png`;
 
   if (isLoading) {
     return (
