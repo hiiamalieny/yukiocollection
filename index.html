@@ -7,11 +7,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        theme: { extend: { colors: { yukio: { bg:"#F7F3E6", electric:"#303A95", neon:"#D8E022" }}}}
+        theme: {
+          extend: {
+            colors: {
+              yukio: {
+                bg: '#F7F3E6',
+                card: '#ffffff',
+                electric: '#303A95',
+                neon: '#D8E022',
+                sky: '#A9D7F3',
+                tangerine: '#F8982E',
+              }
+            },
+            fontFamily: {
+              sans: ['ui-rounded', 'PingFang HK', 'Heiti TC', 'system-ui', 'sans-serif'],
+            },
+            borderRadius: {
+              '3xl': '1.5rem',
+              '4xl': '2rem',
+            }
+          }
+        }
       }
     </script>
   </head>
-  <body class="bg-yukio-bg text-yukio-electric antialiased">
+  <body class="bg-yukio-bg text-yukio-electric antialiased selection:bg-yukio-neon selection:text-yukio-electric">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
