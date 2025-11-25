@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>YUKIO 收藏圖鑑</title>
 
-    <!-- Tailwind CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Tailwind Config -->
     <script>
       tailwind.config = {
         theme: {
@@ -21,38 +19,66 @@
                 neon: '#D8E022',
                 sky: '#A9D7F3',
                 tangerine: '#F8982E',
-                text: '#303A95',
-                pink: '#D8E022',
-                dark: '#303A95',
-                accent: '#F8982E'
               }
-            },
-            fontFamily: {
-              sans: ['ui-rounded', 'PingFang HK', 'Heiti TC', 'system-ui', 'sans-serif'],
-            },
-            borderRadius: {
-              '3xl': '1.5rem',
-              '4xl': '2rem',
             }
           }
         }
       }
     </script>
 
-    <!-- Importmap -->
-    <script type="importmap">
-    {
-      "imports": {
-        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-        "react/": "https://aistudiocdn.com/react@^19.2.0/",
-        "react": "https://aistudiocdn.com/react@^19.2.0",
-        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-      }
-    }
-    </script>
+    <!-- React (CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   </head>
-  <body class="bg-yukio-bg text-yukio-text antialiased selection:bg-yukio-neon selection:text-yukio-electric">
+
+  <body class="bg-yukio-bg text-yukio-electric">
     <div id="root"></div>
-    <script type="module" src="/yukiocollection/assets/main.js"></script>
+
+    <!-- MAIN SCRIPT -->
+    <script type="text/javascript">
+      // ==== YUKIO LIST (直接放 JSON 一次過) ====
+      const YUKIO_LIST = [
+        {id:"Y001",name:"玉子壽司",category:"壽司系列",imageUrl:"public/images/yukio_sushi_tamago.jpg"},
+        {id:"Y002",name:"三文魚籽壽司",category:"壽司系列",imageUrl:"public/images/yukio_sushi_ikura.jpg"},
+        // 你可以自己 paste 所有 item 💪
+      ];
+
+      // ==== React Components ====
+      function YukioCard({ item, isOwned, onToggle }) {
+        return React.createElement("div", {
+          className: `p-4 rounded-3xl shadow cursor-pointer transition-all ${
+            isOwned ? "bg-yukio-neon" : "bg-white"
+          }`,
+          onClick: () => onToggle(item.id)
+        },
+          React.createElement("img", { src: item.imageUrl, className: "w-full rounded-2xl mb-2" }),
+          React.createElement("p", null, item.name)
+        );
+      }
+
+      function App() {
+        const [owned, setOwned] = React.useState([]);
+
+        function toggle(id) {
+          setOwned(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
+        }
+        
+        return React.createElement("div", { className: "max-w-5xl mx-auto p-6" },
+          React.createElement("h1", { className: "text-2xl font-bold mb-4" }, "YUKIO 收藏圖鑑"),
+          React.createElement("div", { className: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4" },
+            YUKIO_LIST.map(item =>
+              React.createElement(YukioCard, {
+                key: item.id, item,
+                isOwned: owned.includes(item.id),
+                onToggle: toggle
+              })
+            )
+          )
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root"))
+        .render(React.createElement(App));
+    </script>
   </body>
 </html>
